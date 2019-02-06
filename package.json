@@ -1,0 +1,23 @@
+{
+  "name": "truffle-base",
+  "version": "0.1.0",
+  "description": "A truffle base project",
+  "main": "index.js",
+  "repository": "https://github.com/gnkz/truffle-base",
+  "author": "gnkz",
+  "license": "MIT",
+  "scripts": {
+    "coverage": "solidity-coverage",
+    "precoveralls": "yarn run coverage",
+    "coveralls": "cat coverage/lcov.info | coveralls",
+    "lint": "solhint 'contracts/**/*.sol'",
+    "test": "truffle test",
+    "truffle": "truffle"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "solhint": "^1.5.0",
+    "solidity-coverage": "^0.5.11",
+    "truffle": "^5.0.2"
+  }
+}
