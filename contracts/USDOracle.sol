@@ -20,6 +20,7 @@ contract USDOracle {
     function updateRate(uint256 _rate) public onlyOwner returns (uint256) {
         if (currentRate != _rate) {
             currentRate = _rate;
+            // solhint-disable-next-line
             updatedAt = now;
 
             emit RateUpdated(currentRate, updatedAt);
